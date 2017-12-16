@@ -1,45 +1,70 @@
 package com.example.usuario.peliculastmdb.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by usuario on 14/12/2017.
  */
 
-public class ResponseMovies {
-
+public class ResponseMovies implements Serializable {
     @SerializedName("page")
-    private int page;
-    @SerializedName("results")
-    private List<Movie> results;
+    @Expose
+    private Integer page;
     @SerializedName("total_results")
-    private int totalResults;
+    @Expose
+    private Integer totalResults;
     @SerializedName("total_pages")
-    private int totalPages;
-    public int getPage() {
+    @Expose
+    private Integer totalPages;
+    @SerializedName("results")
+    @Expose
+    private List<Movie> results = null;
+    private final static long serialVersionUID = 8052399127720334955L;
+
+    public Integer getPage() {
         return page;
     }
-    public void setPage(int page) {
+
+    public void setPage(Integer page) {
         this.page = page;
     }
+
+    public Integer getTotalResults() {
+        return totalResults;
+    }
+
+    public void setTotalResults(Integer totalResults) {
+        this.totalResults = totalResults;
+    }
+
+    public Integer getTotalPages() {
+        return totalPages;
+    }
+
+    public void setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+    }
+
     public List<Movie> getResults() {
         return results;
     }
+
     public void setResults(List<Movie> results) {
         this.results = results;
+
     }
-    public int getTotalResults() {
-        return totalResults;
-    }
-    public void setTotalResults(int totalResults) {
-        this.totalResults = totalResults;
-    }
-    public int getTotalPages() {
-        return totalPages;
-    }
-    public void setTotalPages(int totalPages) {
-        this.totalPages = totalPages;
+
+    @Override
+    public String toString() {
+        return "ResponseMovies{" +
+                "page=" + page +
+                ", totalResults=" + totalResults +
+                ", totalPages=" + totalPages +
+                ", results=" + results +
+                '}';
     }
 }

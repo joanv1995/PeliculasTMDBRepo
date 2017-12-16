@@ -58,7 +58,7 @@
         android:layout_marginTop="120dp"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:background="@drawable/tmdbbutton"
+        android:background="@drawable/buttontouch"
         app:layout_constraintBottom_toBottomOf="@+id/textCerca"
          />
 </RelativeLayout>

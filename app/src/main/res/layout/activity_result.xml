@@ -4,11 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backmovies"
     tools:context="com.example.usuario.peliculastmdb.activities.ResultActivity">
-<android.support.v7.widget.RecyclerView
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:text="refkhrfkher"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        />
+    <android.support.v7.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/total"
     android:id="@+id/recycler_view"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
 
     ></android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>

@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         c.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                c.setBackgroundResource(R.drawable.tmdbbuttonover);
                 if(textoValido && !tc.getText().equals("")){
                     cer = tc.getText().toString();
                     Intent it = new Intent(getApplicationContext(),ResultActivity.class);
